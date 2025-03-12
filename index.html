@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Api client</h1>
+    <h1>Cors validator</h1>
 
     <label for="endpoint">Endpoint</label>
     <input type="text" id="endpoint" placeholder="https://pokeapi.co/api/v2/pokemon/ditto">
@@ -35,7 +35,7 @@
 <script>
 
     async function sendPetition() {
-        const endpoint = document.getElementById('endpoint').value;
+        const endpoint = document.getElementById('endpoint').value || 'https://pokeapi.co/api/v2/pokemon/ditto';
         const method = document.getElementById('method').value.toUpperCase();
         const headers = JSON.parse(document.getElementById('headers').value || '{}');
         const body = document.getElementById('body').value;
